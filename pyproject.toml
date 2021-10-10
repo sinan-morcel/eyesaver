@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "eyesaver"
+version = "1.0.0"
+description = "Save your eyes with this tool that lets you know when the screen changes a little bit. Excellent for late-night study videos."
+authors = ["Sinan Morcel <sinan.h.morcel@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/sinan-morcel/eyesaver"
+repository = "https://github.com/sinan-morcel/eyesaver"
+keywords = ["screen", "cv", "computer vision"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Multimedia :: Graphics :: Capture :: Screen Capture"
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.4.0"
+opencv-python = "^4.5.3"
+mss = "^6.1.0"
+Pillow = "^8.3.2"
+screeninfo = "^0.7"
+scikit-image = "^0.18.3"
+beepy = "^1.0.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+autopep8 = "^1.5.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+eyesaver = "eyesaver.main:app"
